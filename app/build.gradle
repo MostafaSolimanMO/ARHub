@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.google.ar.sceneform.plugin'
 
 android {
     compileSdkVersion 28
@@ -29,3 +30,19 @@ dependencies {
     implementation 'androidx.gridlayout:gridlayout:1.0.0'
     implementation 'com.android.support:cardview-v7:28.0.0'
 }
+
+
+sceneform.asset('sampledata/astronaut.obj',
+        'default',
+        'sampledata/astronaut.sfa',
+        'src/main/assets/astronaut')
+
+sceneform.asset('sampledata/satellite.obj',
+        'default',
+        'sampledata/satellite.sfa',
+        'src/main/assets/satellite')
+
+sceneform.asset('sampledata/spaceShuttle.obj',
+        'default',
+        'sampledata/spaceShuttle.sfa',
+        'src/main/assets/spaceShuttle')

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/assets_layout_background"
+    android:orientation="vertical"
+    android:layout_margin="4dp"
+    android:padding="16dp">
+    <ImageView
+        android:id="@+id/asset_item_image"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:scaleType="fitCenter"
+        tools:src="@drawable/space"
+        />
+    <TextView
+        android:id="@+id/asset_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="#111"
+        android:layout_marginLeft="16dp"
+        tools:text="Earth"/>
+    <TextView
+        android:id="@+id/asset_item_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:textSize="16sp"
+        android:autoSizeTextType="none"
+        android:fontFamily="sans-serif-thin"
+        tools:text="Earth is our home planet. Scientists believe Earth and its moon formed around the same time as the rest of the solar system. They think that was about 4.5 billion years ago."
+        />
+
+</LinearLayout>
