@@ -2,7 +2,11 @@ package com.example.elite.arhub;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -33,5 +37,15 @@ public class BiologyActivity extends AppCompatActivity {
         AssetAdapter adapter = new AssetAdapter(this, assets);
         ListView listView = findViewById(R.id.asset_list);
         listView.setAdapter(adapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+
+                Asset word = assets.get(position);
+                Intent intentUri = new Intent(BiologyActivity.this,FragmentAr.class);
+                intentUri.putExtra("URI",word.getmAssetUri());
+                startActivity(intentUri);
+            }
+        });
     }
 }

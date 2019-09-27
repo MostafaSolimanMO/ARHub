@@ -1,6 +1,9 @@
 package com.example.elite.arhub;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -29,5 +32,15 @@ public class SpaceActivity extends AppCompatActivity {
         AssetAdapter adapter = new AssetAdapter(this, assets);
         ListView listView = findViewById(R.id.asset_list);
         listView.setAdapter(adapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+
+                Asset word = assets.get(position);
+                Intent intentUri = new Intent(SpaceActivity.this,FragmentAr.class);
+                intentUri.putExtra("URI",word.getmAssetUri());
+                startActivity(intentUri);
+            }
+        });
     }
 }

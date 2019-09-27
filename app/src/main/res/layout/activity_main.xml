@@ -4,26 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg"
+    android:background="@drawable/caurve_bg"
     android:orientation="vertical"
+    android:gravity="center_vertical"
+    android:paddingTop="40dp"
     android:weightSum="10"
     tools:context=".MainActivity">
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="2">
-
-        <TextView
-            android:id="@+id/textGrid"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="AR Hub"
-            android:textColor="#ffff"
-            android:textSize="34sp" />
-
-    </RelativeLayout>
 
     <GridLayout
         android:id="@+id/mainGrid"
@@ -59,8 +45,8 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="83dp"
-                    android:layout_height="77dp"
+                    android:layout_width="121dp"
+                    android:layout_height="106dp"
                     android:layout_gravity="center_horizontal"
                     android:src="@drawable/chemistry" />
 
@@ -70,8 +56,9 @@
                     android:text="Chemistry"
                     android:textAlignment="center"
                     android:textColor="#000"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:layout_gravity="center"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif" />
 
             </LinearLayout>
 
@@ -99,8 +86,8 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="83dp"
-                    android:layout_height="77dp"
+                    android:layout_width="121dp"
+                    android:layout_height="106dp"
                     android:layout_gravity="center_horizontal"
                     android:src="@drawable/physics" />
 
@@ -111,8 +98,8 @@
                     android:text="Physics"
                     android:textAlignment="center"
                     android:textColor="#000"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif" />
 
 
             </LinearLayout>
@@ -143,8 +130,8 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="83dp"
-                    android:layout_height="77dp"
+                    android:layout_width="121dp"
+                    android:layout_height="106dp"
                     android:layout_gravity="center_horizontal"
                     android:src="@drawable/geology" />
 
@@ -155,8 +142,8 @@
                     android:text="Geology"
                     android:textAlignment="center"
                     android:textColor="#000"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:textSize="14sp"
+                   android:fontFamily="sans-serif" />
 
             </LinearLayout>
 
@@ -184,8 +171,8 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="83dp"
-                    android:layout_height="77dp"
+                    android:layout_width="121dp"
+                    android:layout_height="106dp"
                     android:layout_gravity="center_horizontal"
                     android:src="@drawable/space" />
 
@@ -196,8 +183,8 @@
                     android:text="Space"
                     android:textAlignment="center"
                     android:textColor="#000"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif"/>
 
             </LinearLayout>
 
@@ -227,8 +214,8 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="83dp"
-                    android:layout_height="77dp"
+                    android:layout_width="121dp"
+                    android:layout_height="106dp"
                     android:layout_gravity="center_horizontal"
                     android:src="@drawable/plant" />
 
@@ -239,8 +226,8 @@
                     android:text="Plants"
                     android:textAlignment="center"
                     android:textColor="#000"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif" />
 
             </LinearLayout>
 
@@ -268,8 +255,8 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="83dp"
-                    android:layout_height="77dp"
+                    android:layout_width="121dp"
+                    android:layout_height="106dp"
                     android:layout_gravity="center_horizontal"
                     android:src="@drawable/biology" />
 
@@ -280,15 +267,13 @@
                     android:text="Biology"
                     android:textAlignment="center"
                     android:textColor="#000"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif" />
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
 
     </GridLayout>
-
-
 
 
 </LinearLayout>
