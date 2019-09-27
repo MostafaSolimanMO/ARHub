@@ -37,7 +37,7 @@
     file: 'sampledata/cliff.obj',
     name: 'cliff',
     recenter: 'root',
-    scale: 0.0013010000000000001,
+    scale: 0.0000025,
   },
   version: '0.54:2',
 }

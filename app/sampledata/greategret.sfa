@@ -37,7 +37,7 @@
     file: 'sampledata/greategret.obj',
     name: 'greategret',
     recenter: 'root',
-    scale: 0.96125899999999997,
+    scale: 0.5,
   },
   version: '0.54:2',
 }

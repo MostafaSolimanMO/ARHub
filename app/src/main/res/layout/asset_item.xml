@@ -10,9 +10,9 @@
     <ImageView
         android:id="@+id/asset_item_image"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scaleType="center"
-        tools:src="@drawable/space"
+        android:layout_height="120dp"
+        android:scaleType="fitCenter"
+        tools:src="@drawable/heart_png"
         />
     <TextView
         android:id="@+id/asset_item_title"

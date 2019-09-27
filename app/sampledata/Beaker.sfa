@@ -88,7 +88,7 @@
     file: 'sampledata/Beaker.obj',
     name: 'Beaker',
     recenter: 'root',
-    scale: 0.10000000000000001,
+    scale: 0.025,
   },
   version: '0.54:2',
 }

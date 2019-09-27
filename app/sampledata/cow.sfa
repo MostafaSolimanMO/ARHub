@@ -37,7 +37,7 @@
     file: 'sampledata/cow.obj',
     name: 'cow',
     recenter: 'root',
-    scale: 0.025,
+    scale: 0.093,
   },
   version: '0.54:2',
 }

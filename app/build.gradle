@@ -25,6 +25,7 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:design:28.0.0'
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation "com.google.ar.sceneform.ux:sceneform-ux:1.11.0"
     implementation "com.google.ar.sceneform:animation:1.11.0"
@@ -93,3 +94,49 @@ sceneform.asset('sampledata/skel.obj',
         'default',
         'sampledata/skel.sfa',
         'src/main/assets/skel')
+
+sceneform.asset('sampledata/boulder.obj',
+        'default',
+        'sampledata/boulder.sfa',
+        'src/main/assets/boulder')
+
+sceneform.asset('sampledata/nature.obj',
+        'default',
+        'sampledata/nature.sfa',
+        'src/main/assets/nature')
+
+sceneform.asset('sampledata/pond.obj',
+        'default',
+        'sampledata/pond.sfa',
+        'src/main/assets/pond')
+
+sceneform.asset('sampledata/volcano.obj',
+        'default',
+        'sampledata/volcano.sfa',
+        'src/main/assets/volcano')
+
+sceneform.asset('sampledata/Palm.obj',
+        'default',
+        'sampledata/Palm.sfa',
+        'src/main/assets/Palm')
+
+sceneform.asset('sampledata/Flower.obj',
+        'default',
+        'sampledata/Flower.sfa',
+        'src/main/assets/Flower')
+
+sceneform.asset('sampledata/OakTree.obj',
+        'default',
+        'sampledata/OakTree.sfa',
+        'src/main/assets/OakTree')
+
+sceneform.asset('sampledata/Beaker.obj',
+        'default',
+        'sampledata/Beaker.sfa',
+        'src/main/assets/Beaker')
+
+sceneform.asset('sampledata/Brain_Model.obj',
+        'default',
+        'sampledata/Brain_Model.sfa',
+        'src/main/assets/Brain_Model',
+        ['sampledata/Brain_Model.fbx'])

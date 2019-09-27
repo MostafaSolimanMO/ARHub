@@ -37,7 +37,7 @@
     file: 'sampledata/ferret.obj',
     name: 'ferret',
     recenter: 'root',
-    scale: 0.96655500000000005,
+    scale: 0.5,
   },
   version: '0.54:2',
 }

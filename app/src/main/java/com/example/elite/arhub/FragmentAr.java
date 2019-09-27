@@ -13,7 +13,6 @@ import com.google.ar.core.Frame;
 import com.google.ar.core.HitResult;
 import com.google.ar.core.Plane;
 import com.google.ar.core.Trackable;
-import com.google.ar.core.TrackingState;
 import com.google.ar.sceneform.AnchorNode;
 import com.google.ar.sceneform.animation.ModelAnimator;
 import com.google.ar.sceneform.rendering.AnimationData;
@@ -27,7 +26,6 @@ import java.util.List;
 
 public class FragmentAr extends AppCompatActivity {
     private ArFragment arFragment;
-    private PointerDrawable pointer = new PointerDrawable();
     private boolean isTracking;
     private boolean isHitting;
     private ModelLoader modelLoader;
@@ -40,7 +38,7 @@ public class FragmentAr extends AppCompatActivity {
 
         arFragment.getArSceneView().getScene().addOnUpdateListener(frameTime -> {
             arFragment.onUpdate(frameTime);
-            onUpdate();
+
         });
         Bundle extras = getIntent().getExtras();
         if(extras !=null) {
@@ -53,53 +51,6 @@ public class FragmentAr extends AppCompatActivity {
              addObject(Uri.parse(UriFromActivities));
             }
         });
-    }
-
-    private void onUpdate() {
-        boolean trackingChanged = updateTracking();
-        View contentView = findViewById(android.R.id.content);
-        if (trackingChanged) {
-            if (isTracking) {
-                contentView.getOverlay().add(pointer);
-            } else {
-                contentView.getOverlay().remove(pointer);
-            }
-            contentView.invalidate();
-        }
-
-        if (isTracking) {
-            boolean hitTestChanged = updateHitTest();
-            if (hitTestChanged) {
-                pointer.setEnabled(isHitting);
-                contentView.invalidate();
-            }
-        }
-    }
-    private boolean updateTracking() {
-        Frame frame = arFragment.getArSceneView().getArFrame();
-        boolean wasTracking = isTracking;
-        isTracking = frame != null &&
-                frame.getCamera().getTrackingState() == TrackingState.TRACKING;
-        return isTracking != wasTracking;
-    }
-    private boolean updateHitTest() {
-        Frame frame = arFragment.getArSceneView().getArFrame();
-        android.graphics.Point pt = getScreenCenter();
-        List<HitResult> hits;
-        boolean wasHitting = isHitting;
-        isHitting = false;
-        if (frame != null) {
-            hits = frame.hitTest(pt.x, pt.y);
-            for (HitResult hit : hits) {
-                Trackable trackable = hit.getTrackable();
-                if (trackable instanceof Plane &&
-                        ((Plane) trackable).isPoseInPolygon(hit.getHitPose())) {
-                    isHitting = true;
-                    break;
-                }
-            }
-        }
-        return wasHitting != isHitting;
     }
 
     private android.graphics.Point getScreenCenter() {
