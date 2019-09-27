@@ -27,8 +27,7 @@ public class SpaceActivity extends AppCompatActivity {
 
 
         AssetAdapter adapter = new AssetAdapter(this, assets);
-        ListView listView = (ListView) findViewById(R.id.asset_list);
+        ListView listView = findViewById(R.id.asset_list);
         listView.setAdapter(adapter);
-
     }
 }

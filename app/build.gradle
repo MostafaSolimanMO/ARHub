@@ -46,3 +46,32 @@ sceneform.asset('sampledata/spaceShuttle.obj',
         'default',
         'sampledata/spaceShuttle.sfa',
         'src/main/assets/spaceShuttle')
+
+sceneform.asset('sampledata/cow.obj',
+        'default',
+        'sampledata/cow.sfa',
+        'src/main/assets/cow')
+
+sceneform.asset('sampledata/dolphin.obj',
+        'default',
+        'sampledata/dolphin.sfa',
+        'src/main/assets/dolphin')
+
+sceneform.asset('sampledata/elephant.obj',
+        'default',
+        'sampledata/elephant.sfa',
+        'src/main/assets/elephant')
+
+sceneform.asset('sampledata/ferret.obj',
+        'default',
+        'sampledata/ferret.sfa',
+        'src/main/assets/ferret')
+
+sceneform.asset('sampledata/greategret.obj',
+        'default',
+        'sampledata/greategret.sfa',
+        'src/main/assets/greategret')
+
+
+
+
