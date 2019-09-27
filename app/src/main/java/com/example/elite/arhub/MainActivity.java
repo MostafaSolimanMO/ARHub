@@ -25,11 +25,11 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        CardView cardViewPhysics = findViewById(R.id.Physics_cardView);
-        cardViewPhysics.setOnClickListener(new View.OnClickListener() {
+        CardView cardViewHumans = findViewById(R.id.Humans_cardView);
+        cardViewHumans.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, PhysicsActivity.class);
+                Intent intent = new Intent(MainActivity.this, HumansActivity.class);
                 startActivity(intent);
             }
         });

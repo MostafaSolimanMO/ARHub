@@ -15,6 +15,8 @@ import com.google.ar.core.Plane;
 import com.google.ar.core.Trackable;
 import com.google.ar.core.TrackingState;
 import com.google.ar.sceneform.AnchorNode;
+import com.google.ar.sceneform.animation.ModelAnimator;
+import com.google.ar.sceneform.rendering.AnimationData;
 import com.google.ar.sceneform.rendering.ModelRenderable;
 import com.google.ar.sceneform.ux.ArFragment;
 import com.google.ar.sceneform.ux.BaseArFragment;
@@ -29,7 +31,7 @@ public class FragmentAr extends AppCompatActivity {
     private boolean isTracking;
     private boolean isHitting;
     private ModelLoader modelLoader;
-    private String UriFromActivies;
+    private String UriFromActivities;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,13 +44,13 @@ public class FragmentAr extends AppCompatActivity {
         });
         Bundle extras = getIntent().getExtras();
         if(extras !=null) {
-             UriFromActivies = extras.getString("URI");
+             UriFromActivities = extras.getString("URI");
         }
         modelLoader = new ModelLoader(new WeakReference<>(this));
         arFragment.setOnTapArPlaneListener(new BaseArFragment.OnTapArPlaneListener() {
             @Override
             public void onTapPlane(HitResult hitResult, Plane plane, MotionEvent motionEvent) {
-             addObject(Uri.parse(UriFromActivies));
+             addObject(Uri.parse(UriFromActivities));
             }
         });
     }
@@ -128,13 +130,38 @@ public class FragmentAr extends AppCompatActivity {
         node.setParent(anchorNode);
         arFragment.getArSceneView().getScene().addChild(anchorNode);
         node.select();
+        startAnimation(node, renderable);
     }
     public void onException(Throwable throwable){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage(throwable.getMessage())
-                .setTitle("Codelab error!");
+                .setTitle("error!");
         AlertDialog dialog = builder.create();
         dialog.show();
         return;
+    }
+    public void startAnimation(TransformableNode node, ModelRenderable renderable) {
+        if (renderable == null || renderable.getAnimationDataCount() == 0) {
+            return;
+        }
+        for (int i = 0; i < renderable.getAnimationDataCount(); i++) {
+            AnimationData animationData = renderable.getAnimationData(i);
+        }
+        ModelAnimator animator = new ModelAnimator(renderable.getAnimationData(0), renderable);
+        animator.start();
+        node.setOnTapListener(
+                (hitTestResult, motionEvent) -> {
+                    togglePauseAndResume(animator);
+                });
+    }
+
+    public void togglePauseAndResume(ModelAnimator animator) {
+        if (animator.isPaused()) {
+            animator.resume();
+        } else if (animator.isStarted()) {
+            animator.pause();
+        } else {
+            animator.start();
+        }
     }
 }

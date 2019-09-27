@@ -10,11 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".FragmentAr"></activity>
-        <activity android:name=".ArFragment" />
         <activity android:name=".BiologyActivity" />
         <activity android:name=".PlantsActivity" />
         <activity android:name=".SpaceActivity" />
-        <activity android:name=".PhysicsActivity" />
+        <activity android:name=".HumansActivity" />
         <activity android:name=".ChemistryActivty" />
         <activity android:name=".GeologyActivity" />
         <activity android:name=".MainActivity">
