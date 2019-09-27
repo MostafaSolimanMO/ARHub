@@ -9,15 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".BiologyActivity"></activity>
+        <activity android:name=".FragmentAr"></activity>
+        <activity android:name=".ArFragment" />
+        <activity android:name=".BiologyActivity" />
         <activity android:name=".PlantsActivity" />
         <activity android:name=".SpaceActivity" />
         <activity android:name=".PhysicsActivity" />
         <activity android:name=".ChemistryActivty" />
         <activity android:name=".GeologyActivity" />
-        <activity android:name=".Chemistry_Activity" />
-        <activity android:name=".assets_activity2" />
-        <activity android:name=".Assets_Layout" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,6 +24,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="com.google.ar.core"
+            android:value="required" />
     </application>
+
+    <uses-feature
+        android:name="android.hardware.camera.ar"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
 
 </manifest>
