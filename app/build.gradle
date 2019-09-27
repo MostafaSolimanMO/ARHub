@@ -32,10 +32,6 @@ dependencies {
 }
 
 
-sceneform.asset('sampledata/astronaut.obj',
-        'default',
-        'sampledata/astronaut.sfa',
-        'src/main/assets/astronaut')
 
 sceneform.asset('sampledata/satellite.obj',
         'default',
@@ -71,3 +67,63 @@ sceneform.asset('sampledata/greategret.obj',
         'default',
         'sampledata/greategret.sfa',
         'src/main/assets/greategret')
+
+sceneform.asset('sampledata/astronaut.obj',
+        'default',
+        'sampledata/astronaut.sfa',
+        'src/main/assets/astronaut')
+
+sceneform.asset('sampledata/Beaker.obj',
+        'default',
+        'sampledata/Beaker.sfa',
+        'src/main/assets/Beaker')
+
+sceneform.asset('sampledata/boulder.obj',
+        'default',
+        'sampledata/boulder.sfa',
+        'src/main/assets/boulder')
+
+sceneform.asset('sampledata/cliff.obj',
+        'default',
+        'sampledata/cliff.sfa',
+        'src/main/assets/cliff')
+
+sceneform.asset('sampledata/nature.obj',
+        'default',
+        'sampledata/nature.sfa',
+        'src/main/assets/nature')
+
+sceneform.asset('sampledata/pond.obj',
+        'default',
+        'sampledata/pond.sfa',
+        'src/main/assets/pond')
+
+sceneform.asset('sampledata/volcano.obj',
+        'default',
+        'sampledata/volcano.sfa',
+        'src/main/assets/volcano')
+
+sceneform.asset('sampledata/eflower.obj',
+        'default',
+        'sampledata/eflower.sfa',
+        'src/main/assets/eflower')
+
+sceneform.asset('sampledata/fall tree.obj',
+        'default',
+        'sampledata/fall tree.sfa',
+        'src/main/assets/fall tree')
+
+sceneform.asset('sampledata/Flower.obj',
+        'default',
+        'sampledata/Flower.sfa',
+        'src/main/assets/Flower')
+
+sceneform.asset('sampledata/OakTree.obj',
+        'default',
+        'sampledata/OakTree.sfa',
+        'src/main/assets/OakTree')
+
+sceneform.asset('sampledata/Palm.obj',
+        'default',
+        'sampledata/Palm.sfa',
+        'src/main/assets/Palm')
