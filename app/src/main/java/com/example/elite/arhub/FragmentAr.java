@@ -48,7 +48,7 @@ public class FragmentAr extends AppCompatActivity {
         arFragment.setOnTapArPlaneListener(new BaseArFragment.OnTapArPlaneListener() {
             @Override
             public void onTapPlane(HitResult hitResult, Plane plane, MotionEvent motionEvent) {
-             addObject(Uri.parse(UriFromActivities));
+                addObject(Uri.parse(UriFromActivities));
             }
         });
     }
