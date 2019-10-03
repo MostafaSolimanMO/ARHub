@@ -26,8 +26,6 @@ import java.util.List;
 
 public class FragmentAr extends AppCompatActivity {
     private ArFragment arFragment;
-    private boolean isTracking;
-    private boolean isHitting;
     private ModelLoader modelLoader;
     private String UriFromActivities;
     @Override
