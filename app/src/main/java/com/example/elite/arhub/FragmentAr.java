@@ -2,7 +2,6 @@ package com.example.elite.arhub;
 
 import android.net.Uri;
 import android.os.Bundle;
-import android.view.MotionEvent;
 import android.view.View;
 
 import androidx.appcompat.app.AlertDialog;
@@ -18,7 +17,6 @@ import com.google.ar.sceneform.animation.ModelAnimator;
 import com.google.ar.sceneform.rendering.AnimationData;
 import com.google.ar.sceneform.rendering.ModelRenderable;
 import com.google.ar.sceneform.ux.ArFragment;
-import com.google.ar.sceneform.ux.BaseArFragment;
 import com.google.ar.sceneform.ux.TransformableNode;
 
 import java.lang.ref.WeakReference;
@@ -34,21 +32,13 @@ public class FragmentAr extends AppCompatActivity {
         setContentView(R.layout.activity_fragment_ar);
         arFragment = (ArFragment) getSupportFragmentManager().findFragmentById(R.id.sceneform_fragment);
 
-        arFragment.getArSceneView().getScene().addOnUpdateListener(frameTime -> {
-            arFragment.onUpdate(frameTime);
-
-        });
+        arFragment.getArSceneView().getScene().addOnUpdateListener(frameTime -> arFragment.onUpdate(frameTime));
         Bundle extras = getIntent().getExtras();
         if(extras !=null) {
              UriFromActivities = extras.getString("URI");
         }
         modelLoader = new ModelLoader(new WeakReference<>(this));
-        arFragment.setOnTapArPlaneListener(new BaseArFragment.OnTapArPlaneListener() {
-            @Override
-            public void onTapPlane(HitResult hitResult, Plane plane, MotionEvent motionEvent) {
-                addObject(Uri.parse(UriFromActivities));
-            }
-        });
+        arFragment.setOnTapArPlaneListener((hitResult, plane, motionEvent) -> addObject(Uri.parse(UriFromActivities)));
     }
 
     private android.graphics.Point getScreenCenter() {
